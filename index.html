@@ -3,54 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharat AI - Your Intelligent Assistant</title>
+  <title>Bharat AI ⚡ Powered by Groq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-animation">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+
   <div class="app">
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <div class="logo-icon">🇮🇳</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🇮🇳</div>
         <div>
           <h1>Bharat AI</h1>
-          <p class="tagline">Your Intelligent Indian Assistant</p>
+          <span class="powered">⚡ Powered by Groq</span>
         </div>
       </div>
-      <button id="clearBtn" class="clear-btn" title="Clear chat">🗑️ Clear</button>
-    </header>
 
-    <!-- Chat Window -->
-    <main id="chatWindow" class="chat-window">
-      <div class="welcome">
-        <h2>Namaste! 🙏</h2>
-        <p>I'm <strong>Bharat AI</strong>, powered by Google Gemini. Ask me anything!</p>
-        <div class="suggestions">
-          <button class="suggestion">Tell me about Indian culture</button>
-          <button class="suggestion">Write a poem in Hindi</button>
-          <button class="suggestion">Explain quantum physics simply</button>
-          <button class="suggestion">Help me code in Python</button>
+      <button id="newChatBtn" class="new-chat-btn">
+        <span>＋</span> New Chat
+      </button>
+
+      <div class="model-selector">
+        <label>🤖 Model</label>
+        <select id="modelSelect">
+          <option value="llama-3.3-70b-versatile">Llama 3.3 70B (Best)</option>
+          <option value="llama-3.1-8b-instant">Llama 3.1 8B (Fastest)</option>
+          <option value="gemma2-9b-it">Gemma 2 9B</option>
+          <option value="meta-llama/llama-4-scout-17b-16e-instruct">Llama 4 Scout</option>
+        </select>
+      </div>
+
+      <div class="info-box">
+        <h3>✨ Features</h3>
+        <ul>
+          <li>⚡ Lightning-fast responses</li>
+          <li>🌐 Multi-lingual (Hindi, English, Hinglish)</li>
+          <li>💾 Conversation memory</li>
+          <li>🎨 Beautiful UI</li>
+        </ul>
+      </div>
+
+      <div class="footer-credit">
+        <p>Made with ❤️ in Bharat</p>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="status">
+          <span class="status-dot"></span>
+          <span>Online · Ready to help</span>
+        </div>
+        <button id="clearBtn" class="icon-btn" title="Clear chat">🗑️</button>
+      </header>
+
+      <div id="chatWindow" class="chat-window">
+        <div class="welcome">
+          <div class="welcome-icon">🙏</div>
+          <h2>Namaste! Welcome to <span class="gradient-text">Bharat AI</span></h2>
+          <p>Your intelligent assistant powered by Groq's lightning-fast inference. Ask me anything in any language!</p>
+
+          <div class="suggestions">
+            <button class="suggestion">
+              <span class="emoji">🇮🇳</span>
+              <div>
+                <strong>Indian Culture</strong>
+                <small>Tell me about Diwali traditions</small>
+              </div>
+            </button>
+            <button class="suggestion">
+              <span class="emoji">📝</span>
+              <div>
+                <strong>Hindi Poetry</strong>
+                <small>Likho ek shayari dosti par</small>
+              </div>
+            </button>
+            <button class="suggestion">
+              <span class="emoji">💻</span>
+              <div>
+                <strong>Code Help</strong>
+                <small>Explain Python decorators</small>
+              </div>
+            </button>
+            <button class="suggestion">
+              <span class="emoji">🧠</span>
+              <div>
+                <strong>Learn Something</strong>
+                <small>How does AI actually work?</small>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
+
+      <footer class="input-area">
+        <form id="chatForm" class="chat-form">
+          <div class="input-wrapper">
+            <textarea
+              id="userInput"
+              placeholder="Message Bharat AI..."
+              rows="1"
+              required
+            ></textarea>
+            <button type="submit" id="sendBtn" class="send-btn" title="Send">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <p class="footer-note">Bharat AI can make mistakes. Please verify important information.</p>
+      </footer>
     </main>
-
-    <!-- Input -->
-    <footer class="input-area">
-      <form id="chatForm" class="chat-form">
-        <textarea
-          id="userInput"
-          placeholder="Ask Bharat AI anything..."
-          rows="1"
-          required
-        ></textarea>
-        <button type="submit" id="sendBtn" class="send-btn">
-          <span class="send-icon">➤</span>
-        </button>
-      </form>
-      <p class="footer-note">Bharat AI may produce inaccurate information. Verify important facts.</p>
-    </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
+          </html>
