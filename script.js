@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const API_KEY = "AIzaSyAADdknTINXqIMmNYpMmmOMktCLhHkLObQ";
+const API_KEY = "AIzaSyBOGwnDqtMzk3QfLSQS628sDn-FS8QIwb8";
 const MODEL = "gemini-2.0-flash"; // Fast and free tier model
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
